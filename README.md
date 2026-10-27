@@ -6,24 +6,33 @@ Một thư mục `skills/` là nguồn duy nhất cho hai cách cài: **plugin C
 
 ## Cài cho Claude Code
 
-Mở terminal tại thư mục repo này, rồi chạy:
+Thêm marketplace từ GitHub repo [giaminhgist/Minh-Agent](https://github.com/giaminhgist/Minh-Agent) rồi cài plugin:
+
+```sh
+claude plugin marketplace add giaminhgist/Minh-Agent
+claude plugin install minh-agent@minh-agent-marketplace
+```
+
+Hoặc trong phiên Claude Code:
+
+```text
+/plugin marketplace add giaminhgist/Minh-Agent
+/plugin install minh-agent@minh-agent-marketplace
+```
+
+Repo phải ở chế độ public để Claude Code clone được; manifest nằm ở `.claude-plugin/plugin.json` và `.claude-plugin/marketplace.json` trên branch `main`.
+
+Thử bản local chưa cần đăng ký marketplace:
+
+```sh
+claude --plugin-dir .
+```
+
+Hoặc thêm marketplace từ thư mục đã clone:
 
 ```sh
 claude plugin marketplace add .
 claude plugin install minh-agent@minh-agent-marketplace
-```
-
-Hoặc trong phiên Claude Code chạy từ thư mục repo:
-
-```text
-/plugin marketplace add .
-/plugin install minh-agent@minh-agent-marketplace
-```
-
-Thử local mà chưa đăng ký marketplace:
-
-```sh
-claude --plugin-dir .
 ```
 
 Gọi một Skill, ví dụ:
@@ -33,8 +42,6 @@ Gọi một Skill, ví dụ:
 /minh-agent:grant-proposal Viết draft theo funding call tôi cung cấp.
 /minh-agent:paper-figures Tạo biểu đồ từ results.csv và giữ source tái tạo.
 ```
-
-Repo đã có `.claude-plugin/plugin.json` và `.claude-plugin/marketplace.json`. Khi bạn publish nguyên thư mục này lên GitHub, thay `.` ở lệnh marketplace add bằng tên `OWNER/REPO` thực tế. Hiện chưa tạo hoặc publish repository GitHub; không có URL remote giả định.
 
 ## Cài cho Codex
 

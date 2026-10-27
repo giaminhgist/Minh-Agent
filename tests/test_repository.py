@@ -217,6 +217,11 @@ class RepositoryTests(WorkspaceTest):
     def test_structure(self):
         result=validator.validate()
         self.assertEqual(result['errors'],[])
+    def test_readme_documents_github_marketplace_flow(self):
+        readme=(ROOT/'README.md').read_text(encoding='utf-8')
+        self.assertIn('claude plugin marketplace add giaminhgist/Minh-Agent',readme)
+        self.assertIn('claude plugin install minh-agent@minh-agent-marketplace',readme)
+        self.assertNotIn('chưa tạo hoặc publish',readme)
     def test_package_is_self_contained_and_hashed(self):
         archive=self.path/'plugin.zip'
         packager.package(archive)
