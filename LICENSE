@@ -1,0 +1,21 @@
+Minh-Agent Skills — private working distribution
+
+This repository does not grant a blanket MIT or other public redistribution
+license over the combined collection. Original contributions remain reserved
+pending the owner's choice of a publication license. This does not restrict
+rights granted by the upstream licenses over their respective materials.
+
+Third-party material retains its own terms. See THIRD_PARTY_NOTICES.md and
+licenses/ for attribution and complete retrieved license notices.
+
+Guidance adapted from academic-research-skills is subject to CC BY-NC 4.0,
+including applicable attribution and noncommercial conditions. Renaming or
+rewriting a workflow is not treated as removing these obligations.
+
+The presence of MIT at the ARIS repository root is not represented here as a
+component-level clearance for all upstream dependencies or acknowledgments.
+No external upstream implementation is bundled merely because it is linked.
+
+This is a personal-use development repository. Public/commercial redistribution
+requires choosing compatible terms for original contributions and resolving
+the component provenance items documented in THIRD_PARTY_NOTICES.md.

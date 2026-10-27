@@ -1,0 +1,15 @@
+{
+  "schema": "simple-diagram-v1",
+  "title": "Research evidence workflow",
+  "width": 760,
+  "height": 240,
+  "nodes": [
+    {"id":"data","x":30,"y":85,"width":180,"height":70,"label":"Measured data"},
+    {"id":"audit","x":290,"y":85,"width":180,"height":70,"label":"Evidence audit"},
+    {"id":"paper","x":550,"y":85,"width":180,"height":70,"label":"Paper claims"}
+  ],
+  "edges": [
+    {"source":"data","target":"audit","label":"provenance"},
+    {"source":"audit","target":"paper","label":"supported"}
+  ]
+}

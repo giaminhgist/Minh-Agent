@@ -1,0 +1,13 @@
+{
+  "name": "minh-agent-marketplace",
+  "owner": {"name": "Minh-Agent"},
+  "description": "Minh-Agent research and engineering Skills for Claude Code and Codex: 69 workflows for discovery, proposals, papers, figures, experiments, proofs, patents and coding.",
+  "plugins": [
+    {
+      "name": "minh-agent",
+      "source": "./",
+      "description": "69 research and engineering Skills shared with the Codex distribution.",
+      "version": "0.1.0"
+    }
+  ]
+}

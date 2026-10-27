@@ -1,0 +1,12 @@
+{
+  "schema": "plot-svg-v1",
+  "input": "personal-skills\\examples\\results.csv",
+  "sha256": "adf446cf58356d9badae24d05923b3f870c43fc1c3c28889beb2ba7b212645f8",
+  "rows": 3,
+  "x": "seed",
+  "y": "accuracy",
+  "kind": "scatter",
+  "aggregation": "none",
+  "uncertainty": "not computed",
+  "output": "personal-skills\\examples\\rendered\\accuracy.svg"
+}

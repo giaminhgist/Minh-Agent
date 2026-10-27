@@ -1,0 +1,554 @@
+[
+  {
+    "skill": "scoped-planning",
+    "request": "Plan a reproducible paper-figure pipeline from a CSV dataset and existing LaTeX paper.",
+    "required_artifacts": "Design rationale, ordered plan, assumption ledger and validation/handoff contract.",
+    "failure_boundary": "If required information is missing, ask the smallest question and continue independent analysis; never turn a plan into permission for deployment.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "lean-implementation",
+    "request": "Add CSV export to an existing results table without replacing the UI.",
+    "required_artifacts": "Working change, verification evidence and explicit deferred debt with upgrade conditions.",
+    "failure_boundary": "On a failed assumption, revise the design before layering workarounds; do not silently remove requested behavior to meet a simplicity target.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "root-cause-debugging",
+    "request": "Diagnose a test that passes alone but fails after the integration suite.",
+    "required_artifacts": "Root-cause chain, minimal correction, regression evidence and residual uncertainty.",
+    "failure_boundary": "If reproduction is unavailable, label hypotheses and request targeted evidence; do not present a guessed patch as a confirmed fix.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "test-driven-development",
+    "request": "Fix duplicate queue launches with a failing resume test first.",
+    "required_artifacts": "Behavioral test, implementation and observed red/green/refactor checks.",
+    "failure_boundary": "If tests cannot execute, report NOT_RUN and the missing prerequisite. Do not fabricate the red phase after writing the code.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "evidence-verification",
+    "request": "Verify whether a generated plugin can honestly be called installed and tested.",
+    "required_artifacts": "Claim-to-evidence table with revision, result and limitations.",
+    "failure_boundary": "A reviewer statement or successful file generation is not runtime evidence; downgrade unsupported claims.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "code-review",
+    "request": "Review a queue retry change for duplicate work and resource leaks.",
+    "required_artifacts": "Actionable findings or reviewed feedback ledger, evidence and remaining review scope.",
+    "failure_boundary": "Unavailable independent review must be labeled self-review; avoid inventing defects or accepting feedback merely because it sounds authoritative.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "plan-execution",
+    "request": "Execute an approved manuscript revision plan and track each reviewer issue.",
+    "required_artifacts": "Completed artifacts, task ledger, verification and handoff.",
+    "failure_boundary": "If a task is blocked, preserve progress and continue independent tasks. Do not mark a plan complete while required outputs are missing.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "parallel-task-execution",
+    "request": "Investigate three independent failing modules with isolated write ownership.",
+    "required_artifacts": "Ownership map, worker deliverables and verified integrated result.",
+    "failure_boundary": "If delegation is unavailable or unauthorized, execute sequentially and disclose that parallel execution was not used.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "subagent-driven-development",
+    "request": "Implement a parser task and review both its spec compliance and error handling.",
+    "required_artifacts": "Per-task implementation and review records plus integration evidence.",
+    "failure_boundary": "Do not treat different prompts as statistical independence. If agents are unavailable, use a disclosed inline implementation/review cycle.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "workspace-lifecycle",
+    "request": "Prepare an isolated fix and keep the branch ready for review.",
+    "required_artifacts": "Workspace identity, baseline, delivery/retention decision and cleanup evidence.",
+    "failure_boundary": "Do not infer discard from inactivity or a failed test; do not remove a shared or unrelated checkout.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "agent-session-diagnostics",
+    "request": "Explain why a debugging session repeatedly read the same files without making progress.",
+    "required_artifacts": "Redacted timeline, measured versus estimated costs, root causes and actionable recommendations.",
+    "failure_boundary": "Missing logs or usage fields limit conclusions; do not infer performance gains without a comparable baseline.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "technical-debt-ledger",
+    "request": "List shortcut markers and identify which limits will be exceeded by the next release.",
+    "required_artifacts": "Debt ledger with source lines, owner when known and measurable upgrade triggers.",
+    "failure_boundary": "Ignore generated/vendor content unless explicitly requested; do not classify every TODO as a confirmed defect.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "skill-authoring-and-evaluation",
+    "request": "Create a CSV chart Skill and test valid input, missing data and an unrelated image request.",
+    "required_artifacts": "Skill bundle, source attribution, evaluation cases/results and change rationale.",
+    "failure_boundary": "Structural validation alone does not establish behavioral quality. Do not self-modify a whole corpus from one anecdote.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "literature-review",
+    "request": "Find the nearest prior work to a proposed low-memory inference method.",
+    "required_artifacts": "Source ledger, synthesis, comparison matrix and bounded novelty conclusion.",
+    "failure_boundary": "Unavailable providers get a declared fallback, not a claimed equivalent search. Use systematic-review for protocol-based exhaustive review.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "paper-reading",
+    "request": "Explain a paper's main algorithm and which ablation supports its central claim.",
+    "required_artifacts": "Reading notes with source anchors, method reconstruction, evidence gaps and follow-up questions.",
+    "failure_boundary": "When full text is inaccessible, limit the analysis explicitly; never fabricate methods from a title or summary.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "idea-generation",
+    "request": "Propose feasible ideas for a two-week project with a single GPU.",
+    "required_artifacts": "Ranked idea cards, rejected alternatives, novelty risks and pilot plans.",
+    "failure_boundary": "If closest work is unknown, mark novelty unresolved rather than claiming originality; do not invent pilot results.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "idea-discovery",
+    "request": "Discover a robotics research direction with simulator-only resources.",
+    "required_artifacts": "Survey, ranked candidates, novelty comparison, refined proposal and pilot evidence or NOT_RUN.",
+    "failure_boundary": "A novelty check alone is not discovery. Stop at the user's requested stage and retain unresolved viability questions.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "research-proposal",
+    "request": "Turn a selected idea into a six-month PhD project proposal.",
+    "required_artifacts": "Technical proposal, claims-to-tests map, risk register and experiment handoff.",
+    "failure_boundary": "Missing preliminary evidence remains a stated gap; route funding-specific forms to grant-proposal.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "grant-proposal",
+    "request": "Draft specific aims and a work plan from a supplied funding call.",
+    "required_artifacts": "Proposal draft, call-compliance matrix, milestone plan and missing-input list.",
+    "failure_boundary": "Without the call produce a labeled generic draft, not a submission-ready application. Do not invent credentials, partners, results or costs.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "experiment-design",
+    "request": "Design ablations separating a model's architecture change from its training budget.",
+    "required_artifacts": "Experiment roadmap, claim/control/metric matrix, run manifest and analysis plan.",
+    "failure_boundary": "Do not choose metrics after seeing favorable results without disclosing exploration; unresolved data access blocks dependent runs.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "experiment-implementation",
+    "request": "Implement a baseline and ablation configuration with a tiny synthetic smoke test.",
+    "required_artifacts": "Experiment code, configs, smoke evidence and runner handoff.",
+    "failure_boundary": "Missing data or remote tooling yields a blocked deployment step, not fabricated initial results.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "experiment-runner",
+    "request": "Run one smoke configuration and report its actual metric file and exit status.",
+    "required_artifacts": "Run record, logs, metrics, status and artifact references.",
+    "failure_boundary": "A lost connection is UNKNOWN rather than failed; inspect the backend before retrying. Stop or cancel only the identified authorized run.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "experiment-queue",
+    "request": "Run two local seeds, resume the queue and verify successful jobs are not launched twice.",
+    "required_artifacts": "Durable queue state, attempt history, logs and completion summary.",
+    "failure_boundary": "Local helper is serial, not SSH/screen or Modal/Vast parity. Never retry an unknown launch automatically.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "compute-management",
+    "request": "Prepare a bounded GPU run and list resources that remain billable afterwards.",
+    "required_artifacts": "Resource plan, actual allocation records, cost assumptions and lifecycle status.",
+    "failure_boundary": "No credential or provider capability means NOT_RUN, not simulated provisioning; keep secrets out of artifacts.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "design-space-exploration",
+    "request": "Explore latency versus accuracy under a fixed memory ceiling.",
+    "required_artifacts": "Trial ledger, feasible/Pareto set, reproducibility evidence and stopping reason.",
+    "failure_boundary": "Failed or timed-out evaluations are not favorable scores. Keep validation/test data out of tuning.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "performance-profiling",
+    "request": "Explain a training pipeline slowdown before changing the model.",
+    "required_artifacts": "Profile, bottleneck explanation, benchmark comparison and correctness evidence.",
+    "failure_boundary": "Do not claim a speedup from unmatched machines or inputs; unavailable profiler data limits attribution.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "research-evidence-audit",
+    "request": "Check a paper's reported average against per-seed CSV outputs.",
+    "required_artifacts": "Reproducible analysis or claim ledger with source anchors and severity-ranked discrepancies.",
+    "failure_boundary": "Missing raw outputs prevents confirmation; an audit with limited access cannot establish that no manipulation occurred.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "manuscript-writing",
+    "request": "Draft a methods section from code and a results outline from supplied tables.",
+    "required_artifacts": "Draft or outline, claim/evidence map, figure plan and unresolved-input list.",
+    "failure_boundary": "Do not write plausible numerical results or bibliography entries to complete a narrative. Formatting and full build are separate steps.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "paper-revision",
+    "request": "Address clarity comments without altering the reported experimental results.",
+    "required_artifacts": "Revised sources, issue/change/evidence ledger, rendered output when available and remaining issues.",
+    "failure_boundary": "If a comment requires new experiments, identify it rather than inventing results; report compile/render failures.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "paper-pipeline",
+    "request": "Take existing results and an outline through a paper draft and reviewed PDF.",
+    "required_artifacts": "Editable paper package, PDF when compiled, provenance and stage-by-stage audit coverage.",
+    "failure_boundary": "A drafted manuscript is not a completed pipeline if required figures, citations or build remain unresolved.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "paper-build-and-format",
+    "request": "Compile a multi-file LaTeX paper and identify unresolved citations.",
+    "required_artifacts": "Build command/log, editable sources, rendered artifact and layout findings.",
+    "failure_boundary": "Opening an editor is not compilation evidence. If no compiler/converter exists, provide source and NOT_RUN status rather than claiming a PDF.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "citation-verification",
+    "request": "Cross-check a bibliography and flag a real paper cited for an unsupported claim.",
+    "required_artifacts": "Reference verification table, field-level differences, claim-support findings and access limits.",
+    "failure_boundary": "An inaccessible source is unverified, not fabricated. Similar titles alone are insufficient to change a citation.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "research-review",
+    "request": "Re-review whether a revised paper actually addresses the reviewers' concerns.",
+    "required_artifacts": "Review with supported strengths, actionable weaknesses, severity and revision criteria.",
+    "failure_boundary": "Scores do not establish truth or independent validation. Backend substitution and missing evidence must be disclosed.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "rebuttal-and-response",
+    "request": "Draft a rebuttal with links to changed sections and two clearly deferred experiments.",
+    "required_artifacts": "Response letter, comment/change matrix and unresolved requests.",
+    "failure_boundary": "Do not claim an experiment was run or text was changed unless verified; do not submit responses automatically.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "venue-transfer",
+    "request": "Transfer a workshop paper to a journal while preserving a text-only revision constraint.",
+    "required_artifacts": "Transferred manuscript, requirements/change map and unresolved submission conditions.",
+    "failure_boundary": "Do not infer that a new template makes the work venue-appropriate or submission-ready.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "integrity-forensics",
+    "request": "Check conflicting reported metrics while clearly separating triage from a full forensic sweep.",
+    "required_artifacts": "Evidence inventory, findings, obligations and explicit triage/full-sweep status.",
+    "failure_boundary": "Codex deterministic-only triage cannot yield CLEAN or full-sweep parity. Unsupported external execution remains UNSUPPORTED.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "paper-figures",
+    "request": "Create a multi-seed accuracy plot with a caption and reproducible source.",
+    "required_artifacts": "Data provenance, reproducible generation command/code, SVG/PDF as available, preview and caption.",
+    "failure_boundary": "Never use generated imagery as scientific measurements. Unsupported plot types require another renderer rather than silently changing the analysis.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "technical-diagrams",
+    "request": "Draw a model architecture with labeled tensors and editable arrows.",
+    "required_artifacts": "Editable diagram source, SVG, optional PDF and semantic/layout checks.",
+    "failure_boundary": "Report renderer limitations; do not present the simple schema as complete upstream FigureSpec parity.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "scientific-illustration",
+    "request": "Illustrate a conceptual mechanism while keeping numerical results in separate plots.",
+    "required_artifacts": "Illustration, generation provenance, revisions and verified caption.",
+    "failure_boundary": "Unavailable image generation yields a design brief, not a claimed rendered figure. Do not manufacture experimental evidence.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "research-talk",
+    "request": "Turn a paper into a ten-minute talk with notes and readable figures.",
+    "required_artifacts": "Editable deck, PDF/previews when rendered, notes/script and timing/QA record.",
+    "failure_boundary": "A Markdown outline is not a finished deck; missing presentation/TeX tooling must be reported.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "research-poster",
+    "request": "Create an A0 landscape poster using supplied paper figures.",
+    "required_artifacts": "HTML/CSS/assets, rendered preview, print PDF when available and layout checks.",
+    "failure_boundary": "Do not resurrect retired LaTeX poster behavior or claim print readiness without a rendered size check.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "formula-derivation",
+    "request": "Derive a loss gradient and check its dimensions and boundary cases.",
+    "required_artifacts": "Derivation, assumptions, sanity checks and limitations.",
+    "failure_boundary": "A plausible symbolic expression is not a proof; if a step cannot be justified, isolate it as an obligation.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "proof-writing",
+    "request": "Prove a convergence statement under explicitly stated boundedness assumptions.",
+    "required_artifacts": "Theorem, proof, lemma dependencies and unresolved gaps.",
+    "failure_boundary": "Do not weaken a theorem silently or label a proof sketch complete.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "proof-audit",
+    "request": "Audit a proof that exchanges a limit and an expectation without justification.",
+    "required_artifacts": "Proof audit, localized gaps/counterexamples and repair requirements.",
+    "failure_boundary": "A missing proof cannot be certified. Compilation of a different statement is not evidence for the target.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "formal-proof",
+    "request": "Complete a Lean lemma and show that no new axioms or sorry placeholders were introduced.",
+    "required_artifacts": "Lean sources, actual compilation evidence, theorem comparison and axiom report.",
+    "failure_boundary": "No Lean installation means NOT_RUN. Do not replace the target with a trivial or stronger-assumption theorem to obtain a green build.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "proof-project",
+    "request": "Resume a proof project after a key lemma's assumptions changed.",
+    "required_artifacts": "Proof dependency graph, artifact ledger, audit state and resume instructions.",
+    "failure_boundary": "State is not proof: no task advances to verified solely because a prior agent said complete.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "patent-prior-art",
+    "request": "Compare an invention's technical features with retrieved patent families.",
+    "required_artifacts": "Prior-art ledger, feature comparison, dates and search limitations.",
+    "failure_boundary": "A search cannot establish absence of prior art or legal patentability; inaccessible databases limit coverage.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "invention-design",
+    "request": "Turn engineering notes into an invention disclosure with alternative embodiments.",
+    "required_artifacts": "Invention disclosure, feature hierarchy, variants and support gaps.",
+    "failure_boundary": "Do not invent a working implementation or conflate a research idea with a legal patentability determination.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "patent-claims",
+    "request": "Draft claim candidates and identify terms missing support in the specification.",
+    "required_artifacts": "Claim set, dependency tree, support map and drafting issues.",
+    "failure_boundary": "Do not promise enforceability or filing readiness; unsupported features stay flagged.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "patent-specification",
+    "request": "Draft embodiment and drawing descriptions using supplied numbered figures.",
+    "required_artifacts": "Specification draft, numeral index and claim-support ledger.",
+    "failure_boundary": "Do not fabricate prototype results or technical details to fill enablement gaps.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "patent-review",
+    "request": "Review a draft whose independent claim introduces a feature absent from the description.",
+    "required_artifacts": "Review findings, support gaps and proposed corrections.",
+    "failure_boundary": "Technical drafting review does not replace jurisdiction-specific legal advice or official examination.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "patent-formatting",
+    "request": "Format a supplied patent draft into DOCX using a provided jurisdiction template.",
+    "required_artifacts": "Formatted draft package, compliance checklist and rendering evidence.",
+    "failure_boundary": "Do not call the package filing-ready solely because it matches a template; missing legal or administrative inputs remain open.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "patent-workflow",
+    "request": "Coordinate a draft patent package from an engineering disclosure.",
+    "required_artifacts": "Patent drafting package, provenance, review findings and handoff.",
+    "failure_boundary": "A complete workflow artifact set is not a legal clearance or patentability guarantee.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "research-memory",
+    "request": "Consolidate paper notes and experiment decisions into a searchable project memory.",
+    "required_artifacts": "Updated notes/index, evidence links, decision history and resume context.",
+    "failure_boundary": "Do not store credentials or unsupported facts as established knowledge; inaccessible sources remain labeled.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "research-workflow",
+    "request": "Resume a research project at paper writing while auditing which experiment evidence is available.",
+    "required_artifacts": "Project state, artifact/dependency ledger, gate results and resume plan.",
+    "failure_boundary": "This bundle's state format is not the full ARS Material Passport wire schema; disclose that interoperability gap.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "overleaf-sync",
+    "request": "Pull an Overleaf project and resolve a bibliography conflict without losing local edits.",
+    "required_artifacts": "Sync status, reconciled files, revision evidence and unresolved conflicts.",
+    "failure_boundary": "If the account lacks Git bridge access, provide export/import guidance and label live sync unavailable; never overwrite remote work blindly.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "report-rendering",
+    "request": "Render an experiment audit as a self-contained HTML report.",
+    "required_artifacts": "Report source, rendered artifact and readability checks.",
+    "failure_boundary": "Do not substitute an HTML file for a requested PDF without disclosing the missing conversion.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "technical-tutorial",
+    "request": "Teach attention mechanisms with a small runnable example and interview questions.",
+    "required_artifacts": "Tutorial, examples, exercises/answers and execution status.",
+    "failure_boundary": "Do not claim code was run when it was only inspected; do not force a fixed language or length.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "pixel-art",
+    "request": "Create a small transparent pixel icon with a limited palette.",
+    "required_artifacts": "Pixel-art image or spritesheet, palette and animation metadata when applicable.",
+    "failure_boundary": "No image tool means a production brief rather than a finished asset; do not blur-resize pixel artwork.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "systematic-screening",
+    "request": "Screen a pilot set against explicit eligibility rules and explain ambiguous decisions.",
+    "required_artifacts": "Screening ledger, decisions with reasons, disagreement record and flow counts.",
+    "failure_boundary": "One model reviewing twice is not two independent reviewers; exploratory screening is not a completed systematic review.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "systematic-review",
+    "request": "Plan and execute a systematic review from a provided database export.",
+    "required_artifacts": "Protocol, search/screen/extraction ledgers, synthesis and review limitations.",
+    "failure_boundary": "A broad narrative survey is not a systematic review. Do not infer missing study data or pool incompatible outcomes.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "research-coaching",
+    "request": "Help a student turn a broad interest into a testable research question.",
+    "required_artifacts": "Coaching dialogue, understanding checks and concrete next steps.",
+    "failure_boundary": "Do not replace the researcher's topic or authorship choices with an unrequested full draft.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "research-fact-check",
+    "request": "Fact-check three factual statements in a proposal and correct overbroad wording.",
+    "required_artifacts": "Claim ledger, source anchors, verdicts and corrected wording.",
+    "failure_boundary": "Unavailable evidence yields unverified rather than false; a source repeating a claim does not establish it.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "publication-disclosure",
+    "request": "Write an AI-assistance disclosure from a supplied activity log.",
+    "required_artifacts": "Disclosure draft, policy mapping and unresolved factual inputs.",
+    "failure_boundary": "Do not invent a usage history or promise policy compliance without the applicable requirements.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "reviewer-calibration",
+    "request": "Evaluate a reviewer rubric against a small labeled manuscript set.",
+    "required_artifacts": "Calibrated rubric, example judgments, disagreement analysis and measured evaluation.",
+    "failure_boundary": "Do not claim calibrated live review merely because a profile file exists; calibration is NOT_RUN without labeled evidence.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "committee-response",
+    "request": "Respond to thesis committee comments with a revision tracking table.",
+    "required_artifacts": "Committee response, issue/change matrix and remaining commitments.",
+    "failure_boundary": "Do not fabricate approvals, meetings or institutional requirements; do not send the response without authorization.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "research-process-audit",
+    "request": "Audit whether a paper pipeline used the final dataset and completed its required reviews.",
+    "required_artifacts": "Process timeline, gate/evidence matrix, deviations and remediation plan.",
+    "failure_boundary": "Do not infer a complete history from chat summaries alone or certify an unaudited stage.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "literature-monitoring",
+    "request": "Create a weekly literature-watch configuration and run an initial deduplicated scan.",
+    "required_artifacts": "Query configuration, last-seen ledger, digest and actual scheduler status.",
+    "failure_boundary": "A saved schedule template is not an active monitor. No scheduler means recurring execution is unavailable.",
+    "status": "NOT_RUN",
+    "evidence": null
+  },
+  {
+    "skill": "ethics-and-preregistration",
+    "request": "Prepare a preregistration draft that distinguishes primary outcomes from exploratory analyses.",
+    "required_artifacts": "Ethics considerations, preregistration draft, analysis commitments and missing approvals.",
+    "failure_boundary": "Drafting does not confer ethics approval or establish legal compliance; never backdate preregistration.",
+    "status": "NOT_RUN",
+    "evidence": null
+  }
+]

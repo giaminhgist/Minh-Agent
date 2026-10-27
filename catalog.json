@@ -1,0 +1,581 @@
+{
+  "version": "0.1.0",
+  "status": "IMPLEMENTED_GUIDANCE_BACKEND_VALIDATION_PARTIAL",
+  "approval": "User approved full catalog on 2026-10-27; Claude plugin and Codex installation requested.",
+  "groups": {
+    "Coding & delivery": [
+      "scoped-planning",
+      "lean-implementation",
+      "root-cause-debugging",
+      "test-driven-development",
+      "evidence-verification",
+      "code-review",
+      "plan-execution",
+      "parallel-task-execution",
+      "subagent-driven-development",
+      "workspace-lifecycle",
+      "agent-session-diagnostics",
+      "technical-debt-ledger"
+    ],
+    "Skill engineering": [
+      "skill-authoring-and-evaluation"
+    ],
+    "Discovery & proposals": [
+      "literature-review",
+      "paper-reading",
+      "idea-generation",
+      "idea-discovery",
+      "research-proposal",
+      "grant-proposal"
+    ],
+    "Experiments & compute": [
+      "experiment-design",
+      "experiment-implementation",
+      "experiment-runner",
+      "experiment-queue",
+      "compute-management",
+      "design-space-exploration",
+      "performance-profiling",
+      "research-evidence-audit"
+    ],
+    "Paper writing & review": [
+      "manuscript-writing",
+      "paper-revision",
+      "paper-pipeline",
+      "paper-build-and-format",
+      "citation-verification",
+      "research-review",
+      "rebuttal-and-response",
+      "venue-transfer",
+      "integrity-forensics"
+    ],
+    "Figures & communication": [
+      "paper-figures",
+      "technical-diagrams",
+      "scientific-illustration",
+      "research-talk",
+      "research-poster"
+    ],
+    "Theory & proofs": [
+      "formula-derivation",
+      "proof-writing",
+      "proof-audit",
+      "formal-proof",
+      "proof-project"
+    ],
+    "Patents": [
+      "patent-prior-art",
+      "invention-design",
+      "patent-claims",
+      "patent-specification",
+      "patent-review",
+      "patent-formatting",
+      "patent-workflow"
+    ],
+    "Knowledge & utilities": [
+      "research-memory",
+      "research-workflow",
+      "overleaf-sync",
+      "report-rendering",
+      "technical-tutorial",
+      "pixel-art"
+    ],
+    "ARS specialist extensions": [
+      "systematic-screening",
+      "systematic-review",
+      "research-coaching",
+      "research-fact-check",
+      "publication-disclosure",
+      "reviewer-calibration",
+      "committee-response",
+      "research-process-audit",
+      "literature-monitoring",
+      "ethics-and-preregistration"
+    ]
+  },
+  "skills": [
+    {
+      "name": "scoped-planning",
+      "description": "Turn an ambiguous change or research task into a design and executable plan before implementation.",
+      "path": "skills/scoped-planning",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/scoped-planning/references/source-contracts.md"
+    },
+    {
+      "name": "lean-implementation",
+      "description": "Implement a scoped software change with a working vertical slice and explicit tradeoffs.",
+      "path": "skills/lean-implementation",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/lean-implementation/references/source-contracts.md"
+    },
+    {
+      "name": "root-cause-debugging",
+      "description": "Investigate a reproducible failure, flaky test or compatibility problem before applying a fix.",
+      "path": "skills/root-cause-debugging",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/root-cause-debugging/references/source-contracts.md"
+    },
+    {
+      "name": "test-driven-development",
+      "description": "Use a red-green-refactor loop for a requested behavior change or regression fix.",
+      "path": "skills/test-driven-development",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/test-driven-development/references/source-contracts.md"
+    },
+    {
+      "name": "evidence-verification",
+      "description": "Check whether completion claims are supported by fresh, relevant evidence.",
+      "path": "skills/evidence-verification",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/evidence-verification/references/source-contracts.md"
+    },
+    {
+      "name": "code-review",
+      "description": "Review a diff or repository, prepare a review request, or evaluate incoming review feedback.",
+      "path": "skills/code-review",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/code-review/references/source-contracts.md"
+    },
+    {
+      "name": "plan-execution",
+      "description": "Execute an existing multi-step plan inline with progress and evidence per task.",
+      "path": "skills/plan-execution",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/plan-execution/references/source-contracts.md"
+    },
+    {
+      "name": "parallel-task-execution",
+      "description": "Split independent work across authorized agents and integrate their results.",
+      "path": "skills/parallel-task-execution",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/parallel-task-execution/references/source-contracts.md"
+    },
+    {
+      "name": "subagent-driven-development",
+      "description": "Deliver a plan through isolated implementer and reviewer contexts when delegation is authorized.",
+      "path": "skills/subagent-driven-development",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/subagent-driven-development/references/source-contracts.md"
+    },
+    {
+      "name": "workspace-lifecycle",
+      "description": "Create or reuse isolated workspaces and finish development branches without losing work.",
+      "path": "skills/workspace-lifecycle",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/workspace-lifecycle/references/source-contracts.md"
+    },
+    {
+      "name": "agent-session-diagnostics",
+      "description": "Analyze agent session logs for repeated work, wasted calls and workflow failures.",
+      "path": "skills/agent-session-diagnostics",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/agent-session-diagnostics/references/source-contracts.md"
+    },
+    {
+      "name": "technical-debt-ledger",
+      "description": "Inventory intentional shortcuts and define measurable conditions for retiring them.",
+      "path": "skills/technical-debt-ledger",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/technical-debt-ledger/references/source-contracts.md"
+    },
+    {
+      "name": "skill-authoring-and-evaluation",
+      "description": "Create, revise or evaluate a reusable Skill, including proposed improvements from run logs.",
+      "path": "skills/skill-authoring-and-evaluation",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/skill-authoring-and-evaluation/references/source-contracts.md"
+    },
+    {
+      "name": "literature-review",
+      "description": "Search and synthesize literature, compare prior work or assess a specific novelty claim.",
+      "path": "skills/literature-review",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/literature-review/references/source-contracts.md"
+    },
+    {
+      "name": "paper-reading",
+      "description": "Read one or a small set of papers and explain methods, evidence and limitations.",
+      "path": "skills/paper-reading",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/paper-reading/references/source-contracts.md"
+    },
+    {
+      "name": "idea-generation",
+      "description": "Generate and rank research ideas with novelty and feasibility checks.",
+      "path": "skills/idea-generation",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/idea-generation/references/source-contracts.md"
+    },
+    {
+      "name": "idea-discovery",
+      "description": "Run an end-to-end discovery workflow from literature gaps to a refined research proposal.",
+      "path": "skills/idea-discovery",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/idea-discovery/references/source-contracts.md"
+    },
+    {
+      "name": "research-proposal",
+      "description": "Write or refine a technical research proposal with testable contributions and an experiment plan.",
+      "path": "skills/research-proposal",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/research-proposal/references/source-contracts.md"
+    },
+    {
+      "name": "grant-proposal",
+      "description": "Draft or revise a funding proposal against a specific call and agency requirements.",
+      "path": "skills/grant-proposal",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/grant-proposal/references/source-contracts.md"
+    },
+    {
+      "name": "experiment-design",
+      "description": "Design experiments, baselines and ablations that can support or falsify research claims.",
+      "path": "skills/experiment-design",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/experiment-design/references/source-contracts.md"
+    },
+    {
+      "name": "experiment-implementation",
+      "description": "Translate an experiment plan into executable code and a verified smoke-run handoff.",
+      "path": "skills/experiment-implementation",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/experiment-implementation/references/source-contracts.md"
+    },
+    {
+      "name": "experiment-runner",
+      "description": "Launch or inspect a scoped research experiment and collect reproducible results.",
+      "path": "skills/experiment-runner",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/experiment-runner/references/source-contracts.md"
+    },
+    {
+      "name": "experiment-queue",
+      "description": "Schedule batches of seeds/configurations with bounded concurrency and safe resume.",
+      "path": "skills/experiment-queue",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/experiment-queue/references/source-contracts.md"
+    },
+    {
+      "name": "compute-management",
+      "description": "Inspect and provision authorized compute resources with explicit cost and ownership tracking.",
+      "path": "skills/compute-management",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/compute-management/references/source-contracts.md"
+    },
+    {
+      "name": "design-space-exploration",
+      "description": "Explore configurations against explicit objectives and compute constraints.",
+      "path": "skills/design-space-exploration",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/design-space-exploration/references/source-contracts.md"
+    },
+    {
+      "name": "performance-profiling",
+      "description": "Find measured runtime or memory bottlenecks and verify optimization effects.",
+      "path": "skills/performance-profiling",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/performance-profiling/references/source-contracts.md"
+    },
+    {
+      "name": "research-evidence-audit",
+      "description": "Analyze experiment results or audit manuscript claims against raw research evidence.",
+      "path": "skills/research-evidence-audit",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/research-evidence-audit/references/source-contracts.md"
+    },
+    {
+      "name": "manuscript-writing",
+      "description": "Draft a research paper, outline, abstract or section from traceable evidence.",
+      "path": "skills/manuscript-writing",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/manuscript-writing/references/source-contracts.md"
+    },
+    {
+      "name": "paper-revision",
+      "description": "Revise a manuscript against a review or improvement objective while controlling claim regressions.",
+      "path": "skills/paper-revision",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/paper-revision/references/source-contracts.md"
+    },
+    {
+      "name": "paper-pipeline",
+      "description": "Coordinate evidence, outline, writing, figures, review and build into a paper deliverable.",
+      "path": "skills/paper-pipeline",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/paper-pipeline/references/source-contracts.md"
+    },
+    {
+      "name": "paper-build-and-format",
+      "description": "Compile, format or convert a paper and inspect the rendered document.",
+      "path": "skills/paper-build-and-format",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/paper-build-and-format/references/source-contracts.md"
+    },
+    {
+      "name": "citation-verification",
+      "description": "Verify bibliographic metadata, reference existence and support for cited claims.",
+      "path": "skills/citation-verification",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/citation-verification/references/source-contracts.md"
+    },
+    {
+      "name": "research-review",
+      "description": "Review research quality or a revised manuscript with explicit scope and evidence.",
+      "path": "skills/research-review",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/research-review/references/source-contracts.md"
+    },
+    {
+      "name": "rebuttal-and-response",
+      "description": "Prepare point-by-point reviewer responses and audit their consistency with revisions.",
+      "path": "skills/rebuttal-and-response",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/rebuttal-and-response/references/source-contracts.md"
+    },
+    {
+      "name": "venue-transfer",
+      "description": "Adapt a paper to a new venue while tracking scope and submission constraints.",
+      "path": "skills/venue-transfer",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/venue-transfer/references/source-contracts.md"
+    },
+    {
+      "name": "integrity-forensics",
+      "description": "Perform scoped research-integrity triage or prepare a supported external forensic run.",
+      "path": "skills/integrity-forensics",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/integrity-forensics/references/source-contracts.md"
+    },
+    {
+      "name": "paper-figures",
+      "description": "Create reproducible scientific plots and tables from real data.",
+      "path": "skills/paper-figures",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/paper-figures/references/source-contracts.md"
+    },
+    {
+      "name": "technical-diagrams",
+      "description": "Create editable architecture, workflow or relationship diagrams using structured vector sources.",
+      "path": "skills/technical-diagrams",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/technical-diagrams/references/source-contracts.md"
+    },
+    {
+      "name": "scientific-illustration",
+      "description": "Create conceptual scientific illustrations with an available image-generation tool.",
+      "path": "skills/scientific-illustration",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/scientific-illustration/references/source-contracts.md"
+    },
+    {
+      "name": "research-talk",
+      "description": "Build, polish or coordinate a research presentation with speaker support.",
+      "path": "skills/research-talk",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/research-talk/references/source-contracts.md"
+    },
+    {
+      "name": "research-poster",
+      "description": "Create an academic HTML/CSS poster with real assets and a print-size layout.",
+      "path": "skills/research-poster",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/research-poster/references/source-contracts.md"
+    },
+    {
+      "name": "formula-derivation",
+      "description": "Derive a mathematical expression with explicit assumptions and notation.",
+      "path": "skills/formula-derivation",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/formula-derivation/references/source-contracts.md"
+    },
+    {
+      "name": "proof-writing",
+      "description": "Construct a mathematical proof for a fixed statement and assumptions.",
+      "path": "skills/proof-writing",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/proof-writing/references/source-contracts.md"
+    },
+    {
+      "name": "proof-audit",
+      "description": "Audit a mathematical proof for gaps, invalid assumptions and counterexamples.",
+      "path": "skills/proof-audit",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/proof-audit/references/source-contracts.md"
+    },
+    {
+      "name": "formal-proof",
+      "description": "Develop or continue a Lean proof and verify the exact theorem and axiom dependencies.",
+      "path": "skills/formal-proof",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/formal-proof/references/source-contracts.md"
+    },
+    {
+      "name": "proof-project",
+      "description": "Manage a multi-stage proof effort with durable theorem and obligation state.",
+      "path": "skills/proof-project",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/proof-project/references/source-contracts.md"
+    },
+    {
+      "name": "patent-prior-art",
+      "description": "Search and organize patent and non-patent prior art for an invention.",
+      "path": "skills/patent-prior-art",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/patent-prior-art/references/source-contracts.md"
+    },
+    {
+      "name": "invention-design",
+      "description": "Structure an invention disclosure and explore technically grounded variants.",
+      "path": "skills/invention-design",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/invention-design/references/source-contracts.md"
+    },
+    {
+      "name": "patent-claims",
+      "description": "Draft patent claim candidates and map their support to a disclosure.",
+      "path": "skills/patent-claims",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/patent-claims/references/source-contracts.md"
+    },
+    {
+      "name": "patent-specification",
+      "description": "Draft a patent specification, embodiments and drawing descriptions from supported material.",
+      "path": "skills/patent-specification",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/patent-specification/references/source-contracts.md"
+    },
+    {
+      "name": "patent-review",
+      "description": "Review a patent draft for internal consistency, support and technical clarity.",
+      "path": "skills/patent-review",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/patent-review/references/source-contracts.md"
+    },
+    {
+      "name": "patent-formatting",
+      "description": "Format a patent package for a specified jurisdiction and output template.",
+      "path": "skills/patent-formatting",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/patent-formatting/references/source-contracts.md"
+    },
+    {
+      "name": "patent-workflow",
+      "description": "Coordinate prior-art search, invention structuring, claims, specification and review.",
+      "path": "skills/patent-workflow",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/patent-workflow/references/source-contracts.md"
+    },
+    {
+      "name": "research-memory",
+      "description": "Maintain a research knowledge base with traceable sources and resumable context.",
+      "path": "skills/research-memory",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/research-memory/references/source-contracts.md"
+    },
+    {
+      "name": "research-workflow",
+      "description": "Coordinate a research project across discovery, experiments, writing and review with durable state.",
+      "path": "skills/research-workflow",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/research-workflow/references/source-contracts.md"
+    },
+    {
+      "name": "overleaf-sync",
+      "description": "Set up or reconcile synchronization between a local LaTeX project and Overleaf.",
+      "path": "skills/overleaf-sync",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/overleaf-sync/references/source-contracts.md"
+    },
+    {
+      "name": "report-rendering",
+      "description": "Render a structured report as readable HTML or another requested document format.",
+      "path": "skills/report-rendering",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/report-rendering/references/source-contracts.md"
+    },
+    {
+      "name": "technical-tutorial",
+      "description": "Create a technical tutorial with explanations, derivations, runnable examples and assessment questions.",
+      "path": "skills/technical-tutorial",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/technical-tutorial/references/source-contracts.md"
+    },
+    {
+      "name": "pixel-art",
+      "description": "Create or edit pixel-art assets with a deliberate palette and native pixel grid.",
+      "path": "skills/pixel-art",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/pixel-art/references/source-contracts.md"
+    },
+    {
+      "name": "systematic-screening",
+      "description": "Screen records for a systematic review with explicit eligibility and adjudication.",
+      "path": "skills/systematic-screening",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/systematic-screening/references/source-contracts.md"
+    },
+    {
+      "name": "systematic-review",
+      "description": "Conduct a protocol-based literature review with reproducible search, screening and synthesis.",
+      "path": "skills/systematic-review",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/systematic-review/references/source-contracts.md"
+    },
+    {
+      "name": "research-coaching",
+      "description": "Guide a researcher through question formation, reading or writing without taking over their decisions.",
+      "path": "skills/research-coaching",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/research-coaching/references/source-contracts.md"
+    },
+    {
+      "name": "research-fact-check",
+      "description": "Verify factual research statements against accessible primary evidence.",
+      "path": "skills/research-fact-check",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/research-fact-check/references/source-contracts.md"
+    },
+    {
+      "name": "publication-disclosure",
+      "description": "Draft accurate publication disclosures for AI assistance, contributions and research practices.",
+      "path": "skills/publication-disclosure",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/publication-disclosure/references/source-contracts.md"
+    },
+    {
+      "name": "reviewer-calibration",
+      "description": "Calibrate a review rubric against labeled examples and report limits of agreement.",
+      "path": "skills/reviewer-calibration",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/reviewer-calibration/references/source-contracts.md"
+    },
+    {
+      "name": "committee-response",
+      "description": "Prepare responses to a thesis committee or research oversight group with traceable revisions.",
+      "path": "skills/committee-response",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/committee-response/references/source-contracts.md"
+    },
+    {
+      "name": "research-process-audit",
+      "description": "Audit a research workflow's decisions, gates and evidence lineage.",
+      "path": "skills/research-process-audit",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/research-process-audit/references/source-contracts.md"
+    },
+    {
+      "name": "literature-monitoring",
+      "description": "Design or run an authorized literature watch and produce a deduplicated digest.",
+      "path": "skills/literature-monitoring",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/literature-monitoring/references/source-contracts.md"
+    },
+    {
+      "name": "ethics-and-preregistration",
+      "description": "Prepare research ethics and preregistration materials tied to a concrete study.",
+      "path": "skills/ethics-and-preregistration",
+      "behavioral_validation": "NOT_RUN",
+      "mode_contracts": "skills/ethics-and-preregistration/references/source-contracts.md"
+    }
+  ]
+}

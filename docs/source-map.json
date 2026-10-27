@@ -1,0 +1,1322 @@
+{
+  "date": "2026-10-26",
+  "status": "IMPLEMENTED_GUIDANCE_NOT_FULL_RUNTIME_PARITY",
+  "comparison": "v1 scope vs source entrypoints; C is not full parity",
+  "snapshots": {
+    "A": {
+      "repository": "Imbad0202/academic-research-skills",
+      "commit": "1ec249df98728682dfbbdfb940a658338bfd6f80",
+      "head_rechecked": "1ec249df98728682dfbbdfb940a658338bfd6f80"
+    },
+    "S": {
+      "repository": "obra/superpowers",
+      "commit": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+      "head_rechecked": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b"
+    },
+    "H": {
+      "repository": "ai-boost/awesome-harness-engineering",
+      "commit": "8534467b139471788c376339165acd8d2483caf9",
+      "head_rechecked": "8534467b139471788c376339165acd8d2483caf9"
+    },
+    "P": {
+      "repository": "DietrichGebert/ponytail",
+      "commit": "09c434ab73ca43761c5d8b0c5d341926c2fba710",
+      "head_rechecked": "09c434ab73ca43761c5d8b0c5d341926c2fba710"
+    },
+    "R": {
+      "repository": "wanshuiyin/auto-claude-code-research-in-sleep",
+      "commit": "18bceb3c71c638bef58096274e1c9a6d323dbc0a",
+      "head_rechecked": "18bceb3c71c638bef58096274e1c9a6d323dbc0a"
+    }
+  },
+  "sourceMappings": [
+    {
+      "repo": "R",
+      "source": "ablation-planner",
+      "capability": "Thiết kế ablation để phân biệt đóng góp và claim",
+      "v1": "C",
+      "target": "experiment-design",
+      "note": "Giữ ma trận câu hỏi–đối chứng–metric; không bỏ vì có experiment-plan."
+    },
+    {
+      "repo": "R",
+      "source": "alphaxiv",
+      "capability": "Đọc nhanh một paper, overview→abstract/source fallback",
+      "v1": "P",
+      "target": "paper-reading",
+      "note": "V1 chỉ survey; cần provenance về tầng nội dung thực sự đọc."
+    },
+    {
+      "repo": "R",
+      "source": "analyze-results",
+      "capability": "Thống kê, aggregate, bảng so sánh và diễn giải kết quả",
+      "v1": "C",
+      "target": "research-evidence-audit",
+      "note": "Giữ mode results; không trộn với integrity verdict."
+    },
+    {
+      "repo": "R",
+      "source": "arxiv",
+      "capability": "Search, metadata, tải PDF, quản lý bản đã tải",
+      "v1": "P",
+      "target": "literature-review",
+      "note": "Adapter arxiv riêng; download/version/rate limits là capability phải kiểm thử."
+    },
+    {
+      "repo": "R",
+      "source": "auto-paper-improvement-loop",
+      "capability": "Review→sửa manuscript→recompile; whitelist và regression claim",
+      "v1": "P",
+      "target": "paper-revision",
+      "note": "V1 có review nhưng chưa có vòng sửa PDF/giới hạn chỉnh sửa cụ thể."
+    },
+    {
+      "repo": "R",
+      "source": "auto-review-loop-llm",
+      "capability": "Review nhiều vòng qua API OpenAI-compatible",
+      "v1": "P",
+      "target": "research-review",
+      "note": "Giữ generic reviewer adapter; không giả định giống Codex về assurance."
+    },
+    {
+      "repo": "R",
+      "source": "auto-review-loop-minimax",
+      "capability": "Review nhiều vòng qua MiniMax MCP/API",
+      "v1": "P",
+      "target": "research-review",
+      "note": "Giữ MiniMax adapter; state/retry phải tương thích contract chung."
+    },
+    {
+      "repo": "R",
+      "source": "auto-review-loop",
+      "capability": "Review–revise nghiên cứu, phản hồi và stop gates",
+      "v1": "C",
+      "target": "research-review",
+      "note": "Giữ bounded iteration và verdict scope; không tự coi score tăng là đúng."
+    },
+    {
+      "repo": "R",
+      "source": "citation-audit",
+      "capability": "Citation có thật, đúng metadata và đúng context",
+      "v1": "C",
+      "target": "citation-verification",
+      "note": "Ba loại kiểm tra riêng; source inaccessible ≠ false."
+    },
+    {
+      "repo": "R",
+      "source": "citation-crosscheck",
+      "capability": "Đối chiếu field bib–web và bảng side-by-side",
+      "v1": "P",
+      "target": "citation-verification",
+      "note": "Thêm XLSX export và isolation contract; generic ledger v1 chưa đủ."
+    },
+    {
+      "repo": "R",
+      "source": "claims-drafting",
+      "capability": "Independent/dependent patent claims và support mapping",
+      "v1": "M",
+      "target": "patent-claims",
+      "note": "Không được nhầm với scientific claim drafting."
+    },
+    {
+      "repo": "R",
+      "source": "comm-lit-review",
+      "capability": "Survey chuyên communication/networking; knowledge-base-first",
+      "v1": "P",
+      "target": "literature-review",
+      "note": "Domain profile riêng, venue/source routing và local library."
+    },
+    {
+      "repo": "R",
+      "source": "deepxiv",
+      "capability": "Tìm/đọc theo section, trending và metadata",
+      "v1": "P",
+      "target": "paper-reading",
+      "note": "Adapter DeepXiv; thiếu dịch vụ phải công khai degradation."
+    },
+    {
+      "repo": "R",
+      "source": "dse-loop",
+      "capability": "Vòng tối ưu tham số có objective, timeout và Pareto frontier",
+      "v1": "M",
+      "target": "design-space-exploration",
+      "note": "Không tương đương chạy một experiment."
+    },
+    {
+      "repo": "R",
+      "source": "embodiment-description",
+      "capability": "Mô tả cách thực hiện invention, variations, claim support",
+      "v1": "M",
+      "target": "patent-specification",
+      "note": "Mode embodiments với numeral consistency; không bịa implementation."
+    },
+    {
+      "repo": "R",
+      "source": "exa-search",
+      "capability": "Web search, find-similar, content extraction",
+      "v1": "P",
+      "target": "literature-review",
+      "note": "Adapter Exa giữ filters/content modes; search web dùng được ngoài literature."
+    },
+    {
+      "repo": "R",
+      "source": "experiment-audit",
+      "capability": "Trace evaluation/GT/metric và tính toàn vẹn kết quả",
+      "v1": "C",
+      "target": "research-evidence-audit",
+      "note": "Mode integrity riêng; sự advisory của skill khác parent gate."
+    },
+    {
+      "repo": "R",
+      "source": "experiment-bridge",
+      "capability": "Chuyển plan thành code→smoke→deploy→kết quả ban đầu",
+      "v1": "P",
+      "target": "experiment-implementation",
+      "note": "V1 chia coding/runner nhưng thiếu milestone handoff và research contract."
+    },
+    {
+      "repo": "R",
+      "source": "experiment-plan",
+      "capability": "Claim-driven roadmap, baseline, seeds, compute budget",
+      "v1": "C",
+      "target": "experiment-design",
+      "note": "Giữ output roadmap, run order và negative outcomes."
+    },
+    {
+      "repo": "R",
+      "source": "experiment-queue",
+      "capability": "Batch seeds/configs, wave scheduling, OOM retry, resume",
+      "v1": "M",
+      "target": "experiment-queue",
+      "note": "Cần scheduler thật; không coi resumable-workflow là đã thay thế."
+    },
+    {
+      "repo": "R",
+      "source": "feishu-notify",
+      "capability": "Push và interactive notification qua Feishu/Lark",
+      "v1": "M",
+      "target": "notification-integration",
+      "note": "Adapter tùy chọn; timeout không trở thành authorization."
+    },
+    {
+      "repo": "R",
+      "source": "figure-description",
+      "capability": "Mô tả patent drawings và reference numerals",
+      "v1": "M",
+      "target": "patent-specification",
+      "note": "Mode drawings; không phải công cụ tạo paper figure."
+    },
+    {
+      "repo": "R",
+      "source": "figure-spec",
+      "capability": "JSON FigureSpec→SVG editable→PDF, render/validate",
+      "v1": "M",
+      "target": "technical-diagrams",
+      "note": "Giữ renderer và schema; Markdown diagram không tương đương."
+    },
+    {
+      "repo": "R",
+      "source": "firecrawl-search",
+      "capability": "Search và scrape URL thành Markdown",
+      "v1": "P",
+      "target": "literature-review",
+      "note": "Adapter Firecrawl giữ domain/time/full-page modes."
+    },
+    {
+      "repo": "R",
+      "source": "formula-derivation",
+      "capability": "Tổ chức giả định, ký hiệu và chuỗi suy diễn/formula",
+      "v1": "M",
+      "target": "formula-derivation",
+      "note": "Không đồng nhất với chứng minh một theorem đã cố định."
+    },
+    {
+      "repo": "R",
+      "source": "gemini-search",
+      "capability": "Discovery literature qua Gemini MCP/CLI",
+      "v1": "P",
+      "target": "literature-review",
+      "note": "Adapter Gemini; kiểm lại nguồn, không dùng lời model làm citation."
+    },
+    {
+      "repo": "R",
+      "source": "grant-proposal",
+      "capability": "Funding application: aims, evidence, milestones, agency format",
+      "v1": "M",
+      "target": "grant-proposal",
+      "note": "Tách khỏi manuscript; kiểm tra call cụ thể khi sử dụng."
+    },
+    {
+      "repo": "R",
+      "source": "idea-creator",
+      "capability": "Sinh/rank ý tưởng, feasibility gate, novelty và pilot",
+      "v1": "M",
+      "target": "idea-generation",
+      "note": "Novelty-check trong v1 không thay thế generation."
+    },
+    {
+      "repo": "R",
+      "source": "idea-discovery-robot",
+      "capability": "Robotics ideation: embodiment, benchmark, sim-first, hardware risk",
+      "v1": "M",
+      "target": "idea-discovery",
+      "note": "Domain profile bắt buộc giữ; không chỉ đổi tên topic."
+    },
+    {
+      "repo": "R",
+      "source": "idea-discovery",
+      "capability": "Survey→ideas→novelty→review→proposal→experiment plan",
+      "v1": "M",
+      "target": "idea-discovery",
+      "note": "Giữ orchestrator có output/handoff riêng, không chỉ gọi literature."
+    },
+    {
+      "repo": "R",
+      "source": "integrity-forensics",
+      "capability": "Launcher Anti-Autoresearch, typed gate, obligations ledger",
+      "v1": "M",
+      "target": "integrity-forensics",
+      "note": "External dependency; nguồn giới hạn Codex deterministic-only, full parity chưa có."
+    },
+    {
+      "repo": "R",
+      "source": "interview-cheatsheet",
+      "capability": "Tutorial ML/LLM, derivations, code, graded interview Q&A",
+      "v1": "M",
+      "target": "technical-tutorial",
+      "note": "Giữ capability; ngôn ngữ/độ dài tùy yêu cầu, không ép tiếng Trung."
+    },
+    {
+      "repo": "R",
+      "source": "invention-structuring",
+      "capability": "Formal invention disclosure, mechanism/features/drawing plan",
+      "v1": "M",
+      "target": "invention-design",
+      "note": "Separate scientific idea và patentable subject matter; chưa xác minh pháp lý."
+    },
+    {
+      "repo": "R",
+      "source": "jurisdiction-format",
+      "capability": "Biên tập patent package CN/US/EP, Markdown/DOCX",
+      "v1": "M",
+      "target": "patent-formatting",
+      "note": "Không khẳng định filing-ready chỉ từ template; quy tắc cần kiểm tra hiện hành."
+    },
+    {
+      "repo": "R",
+      "source": "keenable-search",
+      "capability": "Keyless web search/fetch, date/site filters",
+      "v1": "P",
+      "target": "literature-review",
+      "note": "Adapter Keenable; không bỏ khả năng provider-specific khi gộp."
+    },
+    {
+      "repo": "R",
+      "source": "kill-argument",
+      "capability": "Adversarial attack→defense→unresolved issue adjudication",
+      "v1": "P",
+      "target": "research-review",
+      "note": "V1 nhắc phản luận nhưng thiếu hai lượt độc lập và verdict contract."
+    },
+    {
+      "repo": "R",
+      "source": "lean-formalize",
+      "capability": "Phát triển/tiếp Lean proof, kiểm target và transitive axioms",
+      "v1": "M",
+      "target": "formal-proof",
+      "note": "Compiled lemma không đủ chứng minh original theorem."
+    },
+    {
+      "repo": "R",
+      "source": "mermaid-diagram",
+      "capability": "Flow/sequence/class/ER/Gantt và các diagram types",
+      "v1": "M",
+      "target": "technical-diagrams",
+      "note": "Mode Mermaid riêng với source/render/syntax; FigureSpec không thay mọi loại."
+    },
+    {
+      "repo": "R",
+      "source": "meta-apply",
+      "capability": "Áp corpus patch sau lựa chọn/review và kiểm tra",
+      "v1": "D",
+      "target": "skill-authoring-and-evaluation",
+      "note": "V1 chủ động bỏ tự apply; khôi phục apply có yêu cầu, test và rollback."
+    },
+    {
+      "repo": "R",
+      "source": "meta-optimize",
+      "capability": "Dùng run logs đề xuất cải tiến corpus",
+      "v1": "P",
+      "target": "skill-authoring-and-evaluation",
+      "note": "Audit v1 chưa thay hết optimization/apply cycle."
+    },
+    {
+      "repo": "R",
+      "source": "monitor-experiment",
+      "capability": "Status/process/log/metric snapshots của run",
+      "v1": "C",
+      "target": "experiment-runner",
+      "note": "Giữ monitoring; polling định kỳ dùng host scheduler."
+    },
+    {
+      "repo": "R",
+      "source": "novelty-check",
+      "capability": "Closest prior work, novelty delta, khoảng trống evidence",
+      "v1": "C",
+      "target": "literature-review",
+      "note": "Giữ mode novelty có thể gọi độc lập; không bảo đảm absolute novelty."
+    },
+    {
+      "repo": "R",
+      "source": "openalex",
+      "capability": "Metadata/citation graph, affiliations/funding, filters",
+      "v1": "P",
+      "target": "literature-review",
+      "note": "Adapter OpenAlex riêng; generic web search không thay thế các fields."
+    },
+    {
+      "repo": "R",
+      "source": "overleaf-sync",
+      "capability": "Setup/pull/push/status local↔Overleaf, conflict handling",
+      "v1": "M",
+      "target": "overleaf-sync",
+      "note": "Credentials và Git bridge tùy môi trường; không có runtime test."
+    },
+    {
+      "repo": "R",
+      "source": "paper-claim-audit",
+      "capability": "So manuscript claims/numbers với raw results",
+      "v1": "C",
+      "target": "research-evidence-audit",
+      "note": "Mode manuscript giữ source anchors và missing evidence."
+    },
+    {
+      "repo": "R",
+      "source": "paper-compile",
+      "capability": "LaTeX multi-pass, sửa lỗi, kiểm PDF/page/refs",
+      "v1": "P",
+      "target": "paper-build-and-format",
+      "note": "V1 chỉ nói compile khi cần; cần entrypoint và QA output riêng."
+    },
+    {
+      "repo": "R",
+      "source": "paper-figure",
+      "capability": "Plots/tables từ dữ liệu, scripts tái tạo, vector export",
+      "v1": "M",
+      "target": "paper-figures",
+      "note": "Tách data plots khỏi architecture/raster; cấm dùng ảnh AI giả số liệu."
+    },
+    {
+      "repo": "R",
+      "source": "paper-illustration-image2",
+      "capability": "Minh họa raster qua native-image bridge, finalize/verify",
+      "v1": "M",
+      "target": "scientific-illustration",
+      "note": "Renderer adapter Codex; bridge là experimental, chưa có ở mọi host."
+    },
+    {
+      "repo": "R",
+      "source": "paper-illustration",
+      "capability": "Minh họa học thuật qua image generator, layout/style/visual review",
+      "v1": "M",
+      "target": "scientific-illustration",
+      "note": "Renderer adapter Paperbanana/Gemini; không thay numeric plots."
+    },
+    {
+      "repo": "R",
+      "source": "paper-plan",
+      "capability": "Outline/story/claims-evidence/figure plan",
+      "v1": "C",
+      "target": "manuscript-writing",
+      "note": "Giữ outline-only mode và writing handoff."
+    },
+    {
+      "repo": "R",
+      "source": "paper-poster-html",
+      "capability": "Poster HTML/CSS, real figures, measurement gates, print PDF",
+      "v1": "M",
+      "target": "research-poster",
+      "note": "Không chỉ là export PDF; cần physical canvas/asset/overflow gates."
+    },
+    {
+      "repo": "R",
+      "source": "paper-poster",
+      "capability": "Deprecated alias sang paper-poster-html",
+      "v1": "M",
+      "target": "research-poster",
+      "note": "Chỉ giữ redirect/alias, không phục hồi renderer LaTeX cũ."
+    },
+    {
+      "repo": "R",
+      "source": "paper-slides",
+      "capability": "Paper→Beamer/PPTX, speaker notes và script",
+      "v1": "M",
+      "target": "research-talk",
+      "note": "Mode build; output editable và hình render phải được kiểm tra."
+    },
+    {
+      "repo": "R",
+      "source": "paper-talk",
+      "capability": "Talk pipeline: outline→deck→polish→assurance/export",
+      "v1": "M",
+      "target": "research-talk",
+      "note": "Mode end-to-end giữ timing, claims, citation, anonymity."
+    },
+    {
+      "repo": "R",
+      "source": "paper-write",
+      "capability": "Draft LaTeX theo section, citations, style và reverse outline",
+      "v1": "C",
+      "target": "manuscript-writing",
+      "note": "Giữ standalone section draft; provenance writing sources cần audit."
+    },
+    {
+      "repo": "R",
+      "source": "paper-writing",
+      "capability": "Pipeline outline→figures→draft→PDF→audits→revision",
+      "v1": "P",
+      "target": "paper-pipeline",
+      "note": "V1 chỉ manuscript-writing không thay thế đầy đủ workflow này."
+    },
+    {
+      "repo": "R",
+      "source": "patent-novelty-check",
+      "capability": "Claim-element prior-art mapping, novelty/non-obviousness advisory",
+      "v1": "M",
+      "target": "patent-prior-art",
+      "note": "Không gộp với novelty khoa học; nguồn không là kết luận pháp lý."
+    },
+    {
+      "repo": "R",
+      "source": "patent-pipeline",
+      "capability": "Invention→prior art→claims→specification→review→format",
+      "v1": "M",
+      "target": "patent-workflow",
+      "note": "Giữ full package composition; không tự nộp đơn."
+    },
+    {
+      "repo": "R",
+      "source": "patent-review",
+      "capability": "Review claims/specification theo examiner rubric",
+      "v1": "M",
+      "target": "patent-review",
+      "note": "Tách academic peer review; advisory với current-rule checks khi dùng."
+    },
+    {
+      "repo": "R",
+      "source": "pixel-art",
+      "capability": "SVG pixel illustrations cho README/docs/slides",
+      "v1": "M",
+      "target": "pixel-art",
+      "note": "Ngoài academic figures; giữ optional creative module."
+    },
+    {
+      "repo": "R",
+      "source": "prior-art-search",
+      "capability": "Patent/non-patent prior-art search và evidence report",
+      "v1": "M",
+      "target": "patent-prior-art",
+      "note": "Search trước priority date và landscape; FTO chưa được xác minh độc lập."
+    },
+    {
+      "repo": "R",
+      "source": "proof-checker",
+      "capability": "Obligation ledger, proof gaps, repair, restatement consistency",
+      "v1": "M",
+      "target": "proof-audit",
+      "note": "LLM proof review không thay proof assistant; giữ gap/repair scope."
+    },
+    {
+      "repo": "R",
+      "source": "proof-orchestrator",
+      "capability": "Stateful proof project, local attempt, manual external handoff",
+      "v1": "M",
+      "target": "proof-project",
+      "note": "Không thay bằng state generic; giữ notation/derivation gates và handoff boundary."
+    },
+    {
+      "repo": "R",
+      "source": "proof-writer",
+      "capability": "Theorem/lemma proof hoặc corrected claim/blockage report",
+      "v1": "M",
+      "target": "proof-writing",
+      "note": "Không bịa bước chứng minh; giữ exact original statement."
+    },
+    {
+      "repo": "R",
+      "source": "qzcli",
+      "capability": "Qizhi resource discovery, submit/stop/list/watch/batch jobs",
+      "v1": "M",
+      "target": "compute-management",
+      "note": "Qizhi adapter; có external CLI cần kiểm chứng, không chỉ GPU runner."
+    },
+    {
+      "repo": "R",
+      "source": "rebuttal",
+      "capability": "Reviewer issue board, strategy, grounded response, venue limit",
+      "v1": "P",
+      "target": "rebuttal-and-response",
+      "note": "V1 revision roadmap chưa là rebuttal artifact và coverage audit."
+    },
+    {
+      "repo": "R",
+      "source": "render-html",
+      "capability": "MD/JSON→single-file HTML, math, provenance/fidelity",
+      "v1": "M",
+      "target": "report-rendering",
+      "note": "Preserve readable export; không coi HTML đẹp là semantic validation."
+    },
+    {
+      "repo": "R",
+      "source": "research-implement-feature",
+      "capability": "Working spine→feature ladder và assumption ledger",
+      "v1": "P",
+      "target": "lean-implementation",
+      "note": "Thêm explicit assumption ledger/stub discipline; generic minimal diff chưa đủ."
+    },
+    {
+      "repo": "R",
+      "source": "research-lit",
+      "capability": "Survey/related work/synthesis với multi-source search",
+      "v1": "C",
+      "target": "literature-review",
+      "note": "Giữ source selection, local libraries, metadata vs fulltext scope."
+    },
+    {
+      "repo": "R",
+      "source": "research-pipeline",
+      "capability": "End-to-end idea→implementation→experiment→review→writing handoff",
+      "v1": "P",
+      "target": "research-workflow",
+      "note": "State/resume v1 không thay thế phase-specific research orchestration."
+    },
+    {
+      "repo": "R",
+      "source": "research-refine-pipeline",
+      "capability": "Method proposal→planning gate→experiment roadmap",
+      "v1": "P",
+      "target": "research-proposal",
+      "note": "Mode proposal+experiment handoff, không mặc định launch."
+    },
+    {
+      "repo": "R",
+      "source": "research-refine",
+      "capability": "Problem-anchored method refinement và FINAL_PROPOSAL",
+      "v1": "P",
+      "target": "research-proposal",
+      "note": "Tách khỏi experiment-design; proposal có contribution/method/risk riêng."
+    },
+    {
+      "repo": "R",
+      "source": "research-review",
+      "capability": "Critical review idea/method/results/manuscript",
+      "v1": "C",
+      "target": "research-review",
+      "note": "Giữ standalone review cùng rubric/anchors."
+    },
+    {
+      "repo": "R",
+      "source": "research-wiki",
+      "capability": "Knowledge graph papers/ideas/experiments/claims, query/lint/stats",
+      "v1": "P",
+      "target": "research-memory",
+      "note": "V1 Markdown+JSON chưa tương đương đầy đủ graph operations."
+    },
+    {
+      "repo": "R",
+      "source": "resubmit-pipeline",
+      "capability": "Port venue, isolated snapshot, text-only constraints, audits",
+      "v1": "M",
+      "target": "venue-transfer",
+      "note": "Không chỉ manuscript revision; giữ prior submissions và constraints."
+    },
+    {
+      "repo": "R",
+      "source": "result-to-claim",
+      "capability": "Claim support status và route pivot/supplement/confirm",
+      "v1": "C",
+      "target": "research-evidence-audit",
+      "note": "Giữ decision routing chứ không chỉ tính bảng."
+    },
+    {
+      "repo": "R",
+      "source": "run-experiment",
+      "capability": "Launch local/SSH/Vast/Modal, collect logs/artifacts",
+      "v1": "C",
+      "target": "experiment-runner",
+      "note": "Tách backend lifecycle khỏi execution; hiện chưa có backend test."
+    },
+    {
+      "repo": "R",
+      "source": "semantic-scholar",
+      "capability": "Search published work, citations, venue metadata, filters",
+      "v1": "P",
+      "target": "literature-review",
+      "note": "S2 adapter; metadata coverage khác arXiv."
+    },
+    {
+      "repo": "R",
+      "source": "serverless-modal",
+      "capability": "GPU training/inference/batch/API service, volume/results/cost",
+      "v1": "P",
+      "target": "compute-management",
+      "note": "Modal adapter phải giữ cả inference/service, không chỉ training job."
+    },
+    {
+      "repo": "R",
+      "source": "slides-polish",
+      "capability": "Per-page layout/render review, PPTX/Beamer sửa có mục tiêu",
+      "v1": "M",
+      "target": "research-talk",
+      "note": "Mode polish cho deck có sẵn; không ép rebuild."
+    },
+    {
+      "repo": "R",
+      "source": "specification-writing",
+      "capability": "Patent specification với drawings/embodiments/support",
+      "v1": "M",
+      "target": "patent-specification",
+      "note": "Dù catalog nguồn xếp paper-core, manifest thực là patent."
+    },
+    {
+      "repo": "R",
+      "source": "system-profile",
+      "capability": "Profile script/process/GPU/memory/interconnect",
+      "v1": "P",
+      "target": "performance-profiling",
+      "note": "V1 chỉ reference runner; thiếu diagnostic output standalone."
+    },
+    {
+      "repo": "R",
+      "source": "training-check",
+      "capability": "NaN/divergence/idle GPU và health monitoring",
+      "v1": "C",
+      "target": "experiment-runner",
+      "note": "Stop policy phải được cho phép; state không đồng nhất quality."
+    },
+    {
+      "repo": "R",
+      "source": "vast-gpu",
+      "capability": "Provision/rent/setup/list/destroy GPU instances",
+      "v1": "P",
+      "target": "compute-management",
+      "note": "Vast adapter; destructive cleanup có resource identity, không blanket destroy."
+    },
+    {
+      "repo": "R",
+      "source": "web-debug-search",
+      "capability": "GitHub/Q&A/community/docs search, version compatibility",
+      "v1": "P",
+      "target": "root-cause-debugging",
+      "note": "Mode external discovery; không tự xác nhận workaround hoặc biến thành citation paper."
+    },
+    {
+      "repo": "R",
+      "source": "wiki-enrich",
+      "capability": "Fill paper-note TODOs từ nguồn đọc, giữ notes đã có",
+      "v1": "P",
+      "target": "research-memory",
+      "note": "Thêm enrich/backfill; tạo scaffold không bằng ingest đủ nội dung."
+    },
+    {
+      "repo": "R",
+      "source": "writing-systems-papers",
+      "capability": "Systems-paper paragraph blueprint, design/eval structure",
+      "v1": "P",
+      "target": "manuscript-writing",
+      "note": "Domain profile riêng; không ép template ML chung."
+    },
+    {
+      "repo": "S",
+      "source": "brainstorming",
+      "capability": "Làm rõ ý định, phương án, design sizing; gồm nhu cầu ngoài coding",
+      "v1": "P",
+      "target": "scoped-planning",
+      "note": "Khôi phục generic design và visual companion; v1 trigger thiên coding."
+    },
+    {
+      "repo": "S",
+      "source": "writing-plans",
+      "capability": "Plan nhiều bước: interfaces, file paths, tests, review focus và handoff",
+      "v1": "C",
+      "target": "scoped-planning",
+      "note": "Giữ execution handoff, không chỉ checklist tổng quát."
+    },
+    {
+      "repo": "S",
+      "source": "executing-plans",
+      "capability": "Thực thi plan inline, task lifecycle, completion contract và final review",
+      "v1": "P",
+      "target": "plan-execution",
+      "note": "Không gộp mất vào minimal implementation hoặc state generic."
+    },
+    {
+      "repo": "S",
+      "source": "subagent-driven-development",
+      "capability": "Implementer fresh context, task review/fix loop và final branch review",
+      "v1": "P",
+      "target": "subagent-driven-development",
+      "note": "Giữ workflow riêng khi được phép; fallback inline phải được khai báo."
+    },
+    {
+      "repo": "S",
+      "source": "dispatching-parallel-agents",
+      "capability": "Phân miền độc lập, isolated context, tích hợp và kiểm chứng",
+      "v1": "M",
+      "target": "parallel-task-execution",
+      "note": "V1 chỉ nói delegation optional; chưa có contract dispatch/integration."
+    },
+    {
+      "repo": "S",
+      "source": "systematic-debugging",
+      "capability": "Root cause, hypothesis testing, trace/polluter/condition-based waiting",
+      "v1": "C",
+      "target": "root-cause-debugging",
+      "note": "Giữ supporting techniques, không chỉ khẩu hiệu tìm nguyên nhân."
+    },
+    {
+      "repo": "S",
+      "source": "test-driven-development",
+      "capability": "Red→green→refactor và chất lượng test",
+      "v1": "P",
+      "target": "test-driven-development",
+      "note": "Khôi phục entrypoint TDD có thể gọi trực tiếp; v1 đã nới thành test theo rủi ro."
+    },
+    {
+      "repo": "S",
+      "source": "verification-before-completion",
+      "capability": "Claim phải có verification evidence",
+      "v1": "C",
+      "target": "evidence-verification",
+      "note": "Freshness theo input; không tuyên bố pass từ lời reviewer."
+    },
+    {
+      "repo": "S",
+      "source": "requesting-code-review",
+      "capability": "Chuẩn bị base/head/spec, dispatch reviewer và follow-up",
+      "v1": "P",
+      "target": "code-review",
+      "note": "Thêm request-review mode, khác tự review diff."
+    },
+    {
+      "repo": "S",
+      "source": "receiving-code-review",
+      "capability": "Hiểu/xác minh/phản biện/triển khai feedback và reply workflow",
+      "v1": "C",
+      "target": "code-review",
+      "note": "Giữ feedback mode; gửi comment chỉ khi được yêu cầu."
+    },
+    {
+      "repo": "S",
+      "source": "using-git-worktrees",
+      "capability": "Phát hiện isolation, native/Git fallback, setup và baseline",
+      "v1": "D",
+      "target": "workspace-lifecycle",
+      "note": "V1 loại entrypoint; khôi phục capability có trigger rõ và host ownership."
+    },
+    {
+      "repo": "S",
+      "source": "finishing-a-development-branch",
+      "capability": "Verify→merge/PR/keep/discard choice→cleanup",
+      "v1": "D",
+      "target": "workspace-lifecycle",
+      "note": "Native tools không tự thay toàn bộ decision workflow; preserve work."
+    },
+    {
+      "repo": "S",
+      "source": "writing-skills",
+      "capability": "Author Skill, trigger discovery, baseline/with-skill behavior tests",
+      "v1": "P",
+      "target": "skill-authoring-and-evaluation",
+      "note": "Không để audit-only v1 làm mất authoring; reuse skill-creator có sẵn."
+    },
+    {
+      "repo": "S",
+      "source": "diagnosing-superpowers",
+      "capability": "Phân tích session: cost/time, repeated work, plan/quality/conflicts, scrubbed bug report",
+      "v1": "M",
+      "target": "agent-session-diagnostics",
+      "note": "Khác audit Skill corpus; cần session readers và redaction."
+    },
+    {
+      "repo": "S",
+      "source": "using-superpowers",
+      "capability": "Discovery/selection/bootstrap và platform tool mapping",
+      "v1": "D",
+      "target": "host-integration",
+      "note": "Giữ discovery/mapping; chủ động không port 1%-chance mandatory invocation toàn cục."
+    },
+    {
+      "repo": "A",
+      "source": "deep-research",
+      "capability": "8 mode: full/quick/review/lit-review/three-way-scan/fact-check/socratic/systematic-review",
+      "v1": "P",
+      "target": "literature-review",
+      "note": "Không gộp cả 8 vào survey; xem bảng mode A chi tiết."
+    },
+    {
+      "repo": "A",
+      "source": "academic-paper",
+      "capability": "11 mode: draft/outline/revision/abstract/lit-review/format/citation/plan/coach/disclosure/rebuttal-audit",
+      "v1": "P",
+      "target": "manuscript-writing",
+      "note": "V1 thiếu bilingual/format/disclosure/committee; map thêm theo mode."
+    },
+    {
+      "repo": "A",
+      "source": "academic-paper-reviewer",
+      "capability": "6 mode: full/quick/methodology/re-review/guided/calibration",
+      "v1": "P",
+      "target": "research-review",
+      "note": "Không gọi review thường là đã có calibration/guided/re-review contracts."
+    },
+    {
+      "repo": "A",
+      "source": "academic-pipeline",
+      "capability": "10 stage, integrity gates, resume/mid-entry, external reviews, process records",
+      "v1": "P",
+      "target": "research-workflow",
+      "note": "State chung không thay Material Passport, branch/adjudication/collaboration semantics."
+    },
+    {
+      "repo": "A",
+      "source": "sr-screener",
+      "capability": "8 mode: protocol/quick/pilot/TA/FT/adjudicate/audit/report",
+      "v1": "D",
+      "target": "systematic-screening",
+      "note": "V1 chủ động loại; đưa lại vào full-coverage extension, license NC chưa port."
+    },
+    {
+      "repo": "P",
+      "source": "ponytail",
+      "capability": "Smallest complete change; lite/full/ultra/off, reuse, quality floors",
+      "v1": "C",
+      "target": "lean-implementation",
+      "note": "Giữ mức hành vi; session persistence/hooks/band là integration riêng."
+    },
+    {
+      "repo": "P",
+      "source": "ponytail-review",
+      "capability": "Review diff và connected code, lỗi tác động thực",
+      "v1": "C",
+      "target": "code-review",
+      "note": "Giữ mode diff và finding input→bad effect."
+    },
+    {
+      "repo": "P",
+      "source": "ponytail-audit",
+      "capability": "Audit toàn repo: bugs/security/load/tests/perf/bloat",
+      "v1": "C",
+      "target": "code-review",
+      "note": "Giữ mode repo-audit, không áp mặc định vào mọi PR."
+    },
+    {
+      "repo": "P",
+      "source": "ponytail-debt",
+      "capability": "Quét shortcut:/ponytail: comments, ceilings và upgrade path",
+      "v1": "P",
+      "target": "technical-debt-ledger",
+      "note": "Ledger tùy chọn v1 thiếu scanner/standalone trigger."
+    },
+    {
+      "repo": "P",
+      "source": "ponytail-gain",
+      "capability": "Hiển thị benchmark công bố và giới hạn đo",
+      "v1": "D",
+      "target": "catalog-and-benchmarks",
+      "note": "Chuyển docs/command; không nhận benchmark của nguồn là kết quả bộ mới."
+    },
+    {
+      "repo": "P",
+      "source": "ponytail-help",
+      "capability": "Help levels/skills/off/band/default-mode/update",
+      "v1": "D",
+      "target": "catalog-and-benchmarks",
+      "note": "Help generated từ catalog; mode/band là host adapter có status riêng."
+    }
+  ],
+  "arsModes": [
+    [
+      "deep-research",
+      "full / quick / lit-review / three-way-scan",
+      "literature-review",
+      "P",
+      "Báo cáo dài/ngắn, annotated bibliography và WHY/HOW/WHAT comparison phải có mode riêng."
+    ],
+    [
+      "deep-research",
+      "review",
+      "research-review",
+      "C",
+      "Review văn bản được cung cấp, không chạy research mới mặc định."
+    ],
+    [
+      "deep-research",
+      "fact-check",
+      "research-fact-check",
+      "M",
+      "Kiểm chứng khẳng định chung; không chỉ DOI hoặc test software."
+    ],
+    [
+      "deep-research",
+      "socratic + reading probe",
+      "research-coaching",
+      "M",
+      "Guided question formation/understanding, không tự thay tác giả chọn đề tài."
+    ],
+    [
+      "deep-research",
+      "systematic-review + meta-analysis/RoB/GRADE",
+      "systematic-review",
+      "M",
+      "Không đồng nhất với survey hoặc screening; references mới đọc chọn lọc, chi tiết agent/toolkit cần audit tiếp."
+    ],
+    [
+      "deep-research",
+      "literature monitoring",
+      "literature-monitoring",
+      "M",
+      "Nguồn chỉ tạo cấu hình/digest template, không tự background-monitor. Native scheduler là cải tiến mới nếu được yêu cầu."
+    ],
+    [
+      "deep-research",
+      "ethics / authority / preregistration support",
+      "ethics-and-preregistration",
+      "M",
+      "Chuẩn bị evidence/checklist/protocol; không quyết định thay IRB hoặc cơ quan có thẩm quyền; phần policy cần audit riêng."
+    ],
+    [
+      "academic-paper",
+      "full / outline-only / abstract-only",
+      "manuscript-writing",
+      "P",
+      "Bổ sung abstract song ngữ, keywords, outline evidence map và output-format selection."
+    ],
+    [
+      "academic-paper",
+      "revision",
+      "paper-revision",
+      "P",
+      "Patch protocol/applied draft/apply report; preserve original và diff, không chỉ prose rewrite."
+    ],
+    [
+      "academic-paper",
+      "lit-review",
+      "literature-review",
+      "C",
+      "Giữ literature section/full survey boundary."
+    ],
+    [
+      "academic-paper",
+      "format-convert",
+      "paper-build-and-format",
+      "P",
+      "MD/LaTeX/DOCX/PDF và APA/Chicago/MLA/IEEE/Vancouver; format conversion khác citation verification."
+    ],
+    [
+      "academic-paper",
+      "citation-check",
+      "citation-verification",
+      "C",
+      "Locale-aware citation checks; không áp Latin-name sorting cho mọi ngôn ngữ."
+    ],
+    [
+      "academic-paper",
+      "plan",
+      "research-coaching",
+      "M",
+      "Guided chapter planning và INSIGHT collection, khác tự lập outline."
+    ],
+    [
+      "academic-paper",
+      "revision-coach peer-review path",
+      "rebuttal-and-response",
+      "P",
+      "Frozen concerns, author response tracking, roadmap và skeleton."
+    ],
+    [
+      "academic-paper",
+      "revision-coach committee-correspondence",
+      "committee-response",
+      "M",
+      "Đầu vào là thư của committee thật; không mô phỏng approval/decision."
+    ],
+    [
+      "academic-paper",
+      "disclosure",
+      "publication-disclosure",
+      "M",
+      "Venue/policy-anchor, usage facts, applicability/unknown states; không chỉ một câu AI disclosure chung."
+    ],
+    [
+      "academic-paper",
+      "rebuttal-audit",
+      "rebuttal-and-response",
+      "P",
+      "Audit response draft against each concern, read-only; tách khỏi re-review manuscript."
+    ],
+    [
+      "academic-paper-reviewer",
+      "full / quick / methodology-focus",
+      "research-review",
+      "C",
+      "Giữ rubric và scope; multi-seat panel là mode optional, không default bắt buộc."
+    ],
+    [
+      "academic-paper-reviewer",
+      "re-review",
+      "research-review",
+      "P",
+      "Kiểm actual revisions theo frozen criteria; không chỉ hỏi reviewer chấm lại."
+    ],
+    [
+      "academic-paper-reviewer",
+      "guided",
+      "research-coaching",
+      "M",
+      "Guided issue-by-issue learning và revision understanding."
+    ],
+    [
+      "academic-paper-reviewer",
+      "calibration full / directional",
+      "reviewer-calibration",
+      "M",
+      "Gold labels, replicate counts và bounded error metrics; nguồn chưa wired measured profile vào live review."
+    ],
+    [
+      "academic-pipeline",
+      "10 stages + mid-entry/external reviews",
+      "research-workflow",
+      "P",
+      "Giữ domain phases, integrity gates, review/revise/re-review/finalize; không thay bằng generic state machine."
+    ],
+    [
+      "academic-pipeline",
+      "inquiry ledger / replay / cross-run adjudication",
+      "research-memory",
+      "P",
+      "Cần branch/ownership/stale contracts; Markdown notes v1 chưa tương đương schema ARS."
+    ],
+    [
+      "academic-pipeline",
+      "process record / self-reflection / collaboration observer",
+      "research-process-audit",
+      "M",
+      "Opt-in/advisory, không score người dùng thành gate; exact ARS rubric/schema chưa được port."
+    ],
+    [
+      "sr-screener",
+      "protocol / quick / pilot",
+      "systematic-screening",
+      "D",
+      "Protocol freeze, small triage, calibration against team labels."
+    ],
+    [
+      "sr-screener",
+      "ta-screen / ft-screen",
+      "systematic-screening",
+      "D",
+      "Resumable title/abstract và fulltext screening, page-anchored exclusions."
+    ],
+    [
+      "sr-screener",
+      "adjudicate / audit",
+      "systematic-screening",
+      "D",
+      "Conflict suggestions/exclusion audit; advisory vs final human decisions."
+    ],
+    [
+      "sr-screener",
+      "report",
+      "systematic-screening",
+      "D",
+      "XLSX, RIS groups, PRISMA counts, methods, corpus handoff."
+    ]
+  ],
+  "candidateGroups": {
+    "Coding & delivery": [
+      "scoped-planning",
+      "lean-implementation",
+      "root-cause-debugging",
+      "test-driven-development",
+      "evidence-verification",
+      "code-review",
+      "plan-execution",
+      "parallel-task-execution",
+      "subagent-driven-development",
+      "workspace-lifecycle",
+      "agent-session-diagnostics",
+      "technical-debt-ledger"
+    ],
+    "Skill engineering": [
+      "skill-authoring-and-evaluation"
+    ],
+    "Discovery & proposals": [
+      "literature-review",
+      "paper-reading",
+      "idea-generation",
+      "idea-discovery",
+      "research-proposal",
+      "grant-proposal"
+    ],
+    "Experiments & compute": [
+      "experiment-design",
+      "experiment-implementation",
+      "experiment-runner",
+      "experiment-queue",
+      "compute-management",
+      "design-space-exploration",
+      "performance-profiling",
+      "research-evidence-audit"
+    ],
+    "Paper writing & review": [
+      "manuscript-writing",
+      "paper-revision",
+      "paper-pipeline",
+      "paper-build-and-format",
+      "citation-verification",
+      "research-review",
+      "rebuttal-and-response",
+      "venue-transfer",
+      "integrity-forensics"
+    ],
+    "Figures & communication": [
+      "paper-figures",
+      "technical-diagrams",
+      "scientific-illustration",
+      "research-talk",
+      "research-poster"
+    ],
+    "Theory & proofs": [
+      "formula-derivation",
+      "proof-writing",
+      "proof-audit",
+      "formal-proof",
+      "proof-project"
+    ],
+    "Patents": [
+      "patent-prior-art",
+      "invention-design",
+      "patent-claims",
+      "patent-specification",
+      "patent-review",
+      "patent-formatting",
+      "patent-workflow"
+    ],
+    "Knowledge & utilities": [
+      "research-memory",
+      "research-workflow",
+      "overleaf-sync",
+      "report-rendering",
+      "technical-tutorial",
+      "pixel-art"
+    ],
+    "ARS specialist extensions": [
+      "systematic-screening",
+      "systematic-review",
+      "research-coaching",
+      "research-fact-check",
+      "publication-disclosure",
+      "reviewer-calibration",
+      "committee-response",
+      "research-process-audit",
+      "literature-monitoring",
+      "ethics-and-preregistration"
+    ]
+  },
+  "limits": [
+    "No runtime tests",
+    "No exhaustive support-file audit",
+    "No full variant diff",
+    "External repositories not recursively audited",
+    "Host-specific UI and all-host parity not promised",
+    "ARS NC-derived reuse not authorized"
+  ],
+  "newSupportRead": [
+    [
+      "S",
+      "skills/brainstorming/visual-companion.md"
+    ],
+    [
+      "S",
+      "skills/diagnosing-superpowers/references/session-discovery.md"
+    ],
+    [
+      "P",
+      "docs/agent-portability.md"
+    ],
+    [
+      "R",
+      "skills/shared-references/integration-contract.md"
+    ],
+    [
+      "R",
+      "skills/shared-references/writing-principles.md"
+    ],
+    [
+      "R",
+      "skills/proof-orchestrator/NOTICE.md"
+    ],
+    [
+      "R",
+      "skills/paper-poster-html/NOTICE.md"
+    ],
+    [
+      "R",
+      "tools/skill-groups.tsv"
+    ],
+    [
+      "R",
+      "tools/figure_renderer.py"
+    ],
+    [
+      "A",
+      "deep-research/references/systematic_review_protocol.md"
+    ],
+    [
+      "A",
+      "deep-research/references/ethics_checklist.md"
+    ],
+    [
+      "A",
+      "deep-research/references/preregistration_guide.md"
+    ],
+    [
+      "A",
+      "deep-research/references/literature_monitoring_strategies.md"
+    ],
+    [
+      "A",
+      "academic-paper/references/disclosure_mode_protocol.md"
+    ],
+    [
+      "A",
+      "academic-paper/references/committee_correspondence_protocol.md"
+    ],
+    [
+      "A",
+      "academic-pipeline/references/process_summary_protocol.md"
+    ],
+    [
+      "R",
+      "skills/figure-spec/scripts/figure_renderer.py"
+    ],
+    [
+      "R",
+      "skills/experiment-queue/scripts/queue_manager.py"
+    ],
+    [
+      "R",
+      "skills/paper-poster-html/scripts/run_gates.py"
+    ],
+    [
+      "R",
+      "tools/forensics_gate.py"
+    ],
+    [
+      "R",
+      "tools/paper_illustration_image2.py"
+    ]
+  ],
+  "implementation_date": "2026-10-27"
+}
